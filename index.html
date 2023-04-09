@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/pugui.css">
+    <link rel="stylesheet" href="fonts/iconfont.css">
+    <link rel="stylesheet" href="css/index.css">
+    <style>
+        .u-items-box-all {
+            background: #ddd;
+            padding: 5px
+        }
+        
+        .pg-dropdown-box {
+            position: relative;
+        }
+        
+        .pg-dropdown {
+            position: absolute;
+            width: 160px;
+            top: 35px;
+            background: #fff;
+            border-radius: 3px;
+        }
+        
+        .pg-dropdown li>a {
+            padding: 10px;
+            display: block;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .pg-dropdown li>a:hover {
+            background: #fafafa;
+        }
+        
+        .pg-dropdown li>a span {
+            padding-left: 6px;
+        }
+        
+        .pg-ant-main-box {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!--主体控制 start-->
+    <div class="pg-ant">
+        <!--logo 和 菜单导航 start-->
+        <div class="pg-ant-silde bs1">
+            <div class="pg-ant-silde-wrapper pg-ant-silde-fixed">
+                <div class="pg-ant-silde-header">
+                    <a href="" class="pm-logo">
+                        <img src="images/logo.svg" alt="">
+                        <h3>Ant Design 1.0</h3>
+                    </a>
+                </div>
+                <ul class="pg-ant-silde-main">
+                    <li class="pm-menu-items pm-menu-active">
+                        <div class="pm-menu-items-tit">
+                            <i class="iconfont icon-setting"></i>
+                            <span>控制面板</span>
+                            <i class="iconfont icon-arrowup"></i>
+                        </div>
+                        <ul class="pm-menu-sub">
+                            <li>分析页</li>
+                            <li class="pm-menu-sub-active">监控页</li>
+                            <li>工作台</li>
+                        </ul>
+                    </li>
+                    <li class="pm-menu-items">
+                        <div class="pm-menu-items-tit">
+                            <i class="iconfont icon-wrench"></i>
+                            <span>表单页</span>
+                            <i class="iconfont icon-arrowdown"></i>
+                        </div>
+                        <ul class="pm-menu-sub">
+                            <li data-href="form.html">表单页</li>
+                            <li data-href="table.html">表格页</li>
+                            <li data-href="dashboard.html">工作台</li>
+                        </ul>
+                    </li>
+                    <li class="pm-menu-items">
+                        <div class="pm-menu-items-tit">
+                            <i class="iconfont icon-table"></i>
+                            <span>表格页</span>
+                            <i class="iconfont icon-arrowdown"></i>
+                        </div>
+                        <ul class="pm-menu-sub">
+                            <li>分析页</li>
+                            <li>监控页</li>
+                            <li>工作台</li>
+                        </ul>
+                    </li>
+                    <li class="pm-menu-items">
+                        <div class="pm-menu-items-tit">
+                            <i class="iconfont icon-idcard"></i>
+                            <span>详情页</span>
+                            <i class="iconfont icon-arrowdown"></i>
+                        </div>
+                        <ul class="pm-menu-sub">
+                            <li>分析页</li>
+                            <li>监控页</li>
+                            <li>工作台</li>
+                        </ul>
+                    </li>
+                    <li class="pm-menu-items">
+                        <div class="pm-menu-items-tit">
+                            <i class="iconfont icon-read"></i>
+                            <span>结果页</span>
+                            <i class="iconfont icon-arrowdown"></i>
+                        </div>
+                        <ul class="pm-menu-sub">
+                            <li>分析页</li>
+                            <li>监控页</li>
+                            <li>工作台</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="pg-ant-silde-foot">
+                    <i class="iconfont icon-outdent pu-bar"></i>
+                </div>
+            </div>
+        </div>
+        <!--logo 和 菜单导航 end-->
+
+        <!--主体内容区域-->
+        <div class="pg-ant-main">
+            <div class="pg-ant-main-head pg-ant-main-head-fixed  bs1">
+                <a href="" class="pm-logo pm-header-logo hide">
+                    <img src="images/logo.svg" alt="">
+                    <h3>Ant Design 1.0</h3>
+                </a>
+                <div></div>
+                <div class="pg-dropdown-box">
+                    <span class="relative"><i class="iconfont icon-read"></i></span>
+                    <span class="relative"><i class="iconfont icon-user"></i><i class="pug-tip">11</i></span>
+                    <span class="relative"><i class="iconfont icon-idcard"></i><i class="pug-tip green">11</i></span>
+                    <span class="relative"><i class="iconfont icon-table"></i></span>
+                    <span class="relative j-userbox"><i class="iconfont icon-user"></i></span>
+                    <div class="pg-dropdown hide bs1">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="iconfont icon-user"></i>
+                                    <span>个人中心</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="iconfont icon-table"></i>
+                                    <span>个人设置</span>
+                                </a>
+                            </li>
+                            <li class="pm-divider-line"></li>
+                            <li>
+                                <a href="login.html">
+                                    <i class="iconfont icon-setting"></i>
+                                    <span>退出登录</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="pg-ant-main-box">
+                <iframe src="dashboard.html" id="mainframe" style="width:100%;height:100%;" frameborder="0"></iframe>
+            </div>
+            <div class="pg-ant-main-foot">
+                <div>
+                    <a href="">Ant Design 1.0</a>
+                    <a href=""><i class="iconfont icon-github-fill"></i></a>
+                    <a href="">Ant Design 2023</a>
+                </div>
+                <div>Ant Design体验技术部出品</div>
+            </div>
+        </div>
+    </div>
+    <!--主体控制 end -->
+
+    <!--右侧导航-设置 start-->
+    <div class="pg-setting  bs1">
+        <a href="javascript:void(0);" class="pg-setting-op"><i class="iconfont icon-setting"></i></a>
+        <div class="pg-setting-items">
+            <h3>整体风格</h3>
+            <ul class="u-items-box u-items-box-all">
+                <li class="u-items-all u-white"><i class="iconfont icon-check"></i></li>
+                <li class="u-items-all u-black"></li>
+            </ul>
+        </div>
+        <div class="pg-setting-items">
+            <h3>主题色</h3>
+            <ul class="u-items-box">
+                <li class="u-items u-a"><i class="iconfont icon-check"></i></li>
+                <li class="u-items u-b"></li>
+                <li class="u-items u-c"></li>
+                <li class="u-items u-d"></li>
+                <li class="u-items u-e"></li>
+                <li class="u-items u-f"></li>
+                <li class="u-items u-g"></li>
+                <li class="u-items u-h"></li>
+            </ul>
+        </div>
+        <div class="pm-divider"></div>
+        <div class="pg-setting-slide-items">
+            <h3>固定内容</h3>
+            <ul class="u-items-slide-box">
+                <li class="u-items-slide-li">
+                    <span>头部固定</span>
+                    <div class="pm-switch checked js-head-fixed">
+                        <div class="pm-switch-handle"></div>
+                    </div>
+                </li>
+                <li class="u-items-slide-li">
+                    <span>侧边菜单</span>
+                    <div class="pm-switch checked js-slide-fixed">
+                        <div class="pm-switch-handle"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="pm-divider"></div>
+        <div class="pg-setting-slide-items">
+            <h3>显示内容</h3>
+            <ul class="u-items-slide-box">
+                <li class="u-items-slide-li">
+                    <span>头部显示</span>
+                    <div class="pm-switch checked js-head-show">
+                        <div class="pm-switch-handle"></div>
+                    </div>
+                </li>
+                <li class="u-items-slide-li">
+                    <span>侧边显示</span>
+                    <div class="pm-switch checked js-slide-show">
+                        <div class="pm-switch-handle"></div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pm-mask"></div>
+    <!--右侧导航-设置 end-->
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>

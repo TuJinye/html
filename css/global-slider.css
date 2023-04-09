@@ -1,0 +1,529 @@
+@charset "utf-8";
+
+/* --------------------重置样式-------------------------------- */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+button,
+input,
+textarea,
+th,
+td {
+    margin: 0;
+    padding: 0
+}
+
+
+/*设置默认字体*/
+
+body {
+    font-size: 14px;
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, segoe ui, Roboto, helvetica neue, Arial, noto sans, sans-serif, apple color emoji, segoe ui emoji, segoe ui symbol, noto color emoji;
+}
+
+
+/*字体太小用户体检不好，让small恢复12px*/
+
+small {
+    font-size: 12px
+}
+
+h1 {
+    font-size: 18px
+}
+
+h2 {
+    font-size: 16px
+}
+
+h3 {
+    font-size: 14px
+}
+
+h4,
+h5,
+h6 {
+    font-size: 100%
+}
+
+ul,
+ol {
+    list-style: none
+}
+
+a {
+    text-decoration: none;
+    background-color: transparent
+}
+
+a:hover,
+a:active {
+    outline-width: 0;
+    text-decoration: none
+}
+
+
+/*重置表格*/
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+
+/*重置hr*/
+
+hr {
+    border: 0;
+    height: 1px
+}
+
+
+/*图形图片*/
+
+img {
+    border-style: none
+}
+
+img:not([src]) {
+    display: none
+}
+
+svg:not(:root) {
+    overflow: hidden
+}
+
+
+/*下面的操作是针对于html5页面布局准备的，不支持ie6~8以及其他低版本的浏览器*/
+
+html {
+    /*禁用系统默认菜单*/
+    -webkit-touch-callout: none;
+    /*关闭iphone & Android的浏览器纵向和横向模式中自动调整字体大小的功能*/
+    -webkit-text-size-adjust: 100%
+}
+
+input,
+textarea,
+button,
+a {
+    /*表单或者a标签在手机点击时会出现边框或彩色的背景区域，意思是去除点击背景框*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+}
+
+
+/*重置html5元素的默认样式*/
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block
+}
+
+audio:not([controls]),
+video:not([controls]) {
+    display: none;
+    height: 0
+}
+
+progress {
+    vertical-align: baseline
+}
+
+mark {
+    background-color: #ff0;
+    color: #000
+}
+
+sub,
+sup {
+    position: relative;
+    font-size: 75%;
+    line-height: 0;
+    vertical-align: baseline
+}
+
+sub {
+    bottom: -0.25em
+}
+
+sup {
+    top: -0.5em
+}
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    outline: 0
+}
+
+button,
+input {
+    overflow: visible
+}
+
+button,
+select {
+    text-transform: none
+}
+
+textarea {
+    overflow: auto
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: button
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+    border-style: none;
+    padding: 0
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+    outline: 1px dotted ButtonText
+}
+
+[type="checkbox"],
+[type="radio"] {
+    box-sizing: border-box;
+    padding: 0
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto
+}
+
+[type="search"] {
+    -webkit-appearance: textfield;
+    outline-offset: -2px
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none
+}
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: .54
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit
+}
+
+
+/*-----------------通用组件样式 修饰文字大小，隐藏显示，-----------------------*/
+
+.show {
+    display: block;
+}
+
+.hide {
+    display: none;
+}
+
+.fr {
+    float: right;
+}
+
+.fl {
+    float: left;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.abs {
+    position: absolute;
+}
+
+.relative {
+    position: relative;
+}
+
+.flex {
+    display: flex;
+}
+
+.just-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ddd;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 3px;
+}
+
+
+/*-----------------通用布局样式(pg-)-----------------------*/
+
+.pg-ant {
+    display: flex;
+}
+
+
+/*左侧边导航 start*/
+
+.pg-ant-silde {
+    width: 208px;
+    background: #001529;
+    min-height: 100vh;
+    color: #fff;
+    /*
+        如果内部的子元素宽度超过 208就溢出 
+        flex-shrink: 0; 允许你溢出
+        flex-shrink: 1; 自动溢出部分隐藏
+    */
+    flex-shrink: 0;
+    transition: 60ms linear;
+}
+
+
+/*控制logo、菜单、折叠*/
+
+.pg-ant-silde-wrapper {
+    height: 100%;
+    width: inherit;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*logo样式*/
+
+.pg-ant-silde-header {
+    flex-shrink: 0;
+}
+
+.pg-ant-silde-main {
+    flex: 1;
+    overflow: hidden auto;
+}
+
+.pg-ant-silde-main::-webkit-scrollbar-thumb {
+    background: #51606d;
+}
+
+.pg-ant-silde-main::-webkit-scrollbar-track {
+    background: #263849;
+}
+
+.pg-ant-silde-foot {
+    flex-shrink: 0;
+}
+
+
+/*导航固定定位 - fixed*/
+
+.pg-ant-silde-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+/*导航的折叠控制*/
+
+.pg-ant-silde-expand {
+    width: 48px;
+    overflow: hidden;
+}
+
+
+/*左侧边导航 end*/
+
+
+/*主题内容区域  start*/
+
+.pg-ant-main {
+    flex-grow: 1;
+}
+
+
+/*主题内容区域  end*/
+
+
+/*-----------------通用组件样式(pm-)-----------------------*/
+
+.pm-logo {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 16px;
+    cursor: pointer;
+}
+
+.pm-logo>img {
+    width: 32px;
+    height: 32px;
+}
+
+.pm-logo>h3 {
+    margin-left: 12px;
+}
+
+
+/*菜单控制*/
+
+.pm-menu-items {
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+.pm-menu-items-tit {
+    height: 44px;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    padding: 0 15px;
+}
+
+.pm-menu-items-tit>span {
+    margin-right: auto;
+}
+
+.pm-menu-items-tit:hover,
+.pm-menu-active>.pm-menu-items-tit {
+    color: #fff;
+}
+
+.pm-menu-sub {
+    display: none;
+}
+
+
+/*当前li激活的时候，子项全部展开*/
+
+.pm-menu-active .pm-menu-sub {
+    display: block;
+}
+
+.pm-menu-sub>li {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+}
+
+.pm-menu-sub>li:hover,
+.pm-menu-sub-active {
+    color: #fff;
+    background: #1890ff;
+}
+
+
+/*折叠以后控制子菜单全部隐藏*/
+
+.pg-ant-silde-expand .pm-menu-items-tit span,
+.pg-ant-silde-expand .pm-logo h3,
+.pg-ant-silde-expand .pm-menu-items-tit :last-child,
+.pg-ant-silde-expand .pm-menu-sub {
+    display: none;
+}
+
+.pg-ant-silde-expand .pm-menu-items-tit {
+    transform: scale(1.2);
+}
+
+.pg-ant-silde-expand .pm-menu-items {
+    padding: 3px 0
+}
+
+.pg-ant-silde-expand .pm-logo {
+    padding: 16px 8px;
+}
+
+
+/*card*/
+
+
+/*分页*/
+
+
+/*表格*/
+
+
+/*表单*/
+
+
+/*-----------------通用元件(pu-)-----------------------*/
+
+.pu-bar {
+    font-size: 18px;
+    color: #fff;
+    padding: 15px;
+    display: block;
+}
+
+
+/*-----------------响应式系统-----------------------*/
+
+@media(max-width:1400px) {}
+
+@media(max-width:1200px) {}
+
+@media(max-width:992px) {}
+
+@media(max-width:768px) {}
+
+@media(max-width:576px) {}

@@ -1,0 +1,157 @@
+.container {
+    background: url(../images/loginbg.svg) #f0f2f5;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 118px;
+    flex-grow: 1;
+}
+
+.login-logo-box {
+    display: flex;
+    align-items: center;
+}
+
+.login-logo-box>img {
+    width: 44px;
+    height: 44px;
+    margin-right: 16px;
+    vertical-align: top;
+}
+
+.login-logo-box>h3 {
+    color: rgba(0, 0, 0, .85);
+    font-weight: 600;
+    font-size: 33px;
+}
+
+.login-desc {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    color: rgba(0, 0, 0, .45);
+    font-size: 14px;
+}
+
+.pg-table-wrapper {
+    min-width: 328px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pg-tablist {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 0 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    margin-bottom: 16px;
+}
+
+.pg-tablist .tab-items {
+    padding: 12px 0;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.pg-tablist .tab-items.active::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: rgb(24, 144, 255);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.pg-tablist .tab-items.active {
+    color: rgb(24, 144, 255);
+}
+
+.pg-form {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.pg-form-items {
+    margin-bottom: 25px;
+    width: 100%;
+    display: flex;
+    box-sizing: border-box;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 4px 10px;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: 300ms linear;
+}
+
+.pg-form-items .pg-input {
+    flex-grow: 1;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 10px;
+    border: none;
+}
+
+.pg-form-items:hover {
+    border-color: #40a9ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.pg-form-items.error {
+    border-color: #ff4d4f;
+    box-shadow: 0 0 0 2px rgba(244, 67, 54, 0.2);
+}
+
+.pug-d {
+    display: none;
+}
+
+.pg-form-items .pg-input:focus+.pug-d {
+    display: inline;
+}
+
+.pg-form-items-other {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 25px;
+}
+
+.pg-form-items-btn {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+}
+
+.pg-form-items-btn .pg-loginbtn {
+    flex-grow: 1;
+    border: 0;
+    background: #1890ff;
+    height: 40px;
+    padding: 6.4px 15px;
+    font-size: 16px;
+    border-radius: 2px;
+    color: #fff;
+    transition: 300ms linear;
+}
+
+.pg-form-items-btn .pg-loginbtn:hover {
+    background: #0050b3;
+}
